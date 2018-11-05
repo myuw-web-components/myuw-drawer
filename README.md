@@ -2,50 +2,39 @@
 
 A three-part slide out navigation drawer for use with the MyUW App Bar. Includes drawer, links, and optional subheaders with dividers.
 
-## Development and contribution
+## Usage
 
-To run the demo app locally and test the component, run the following commands:
-
-```bash
-$ npm install
-$ npm start
-```
-
-## Getting Started
-
-Add the following imports to your page's `<head>`:
+Add the following imports to your page:
 
 ```html
-<script type="module" src="https://unpkg.com/@myuw-web-components/myuw-drawer@^1?module"></script>
-<script nomodule src="https://unpkg.com/@myuw-web-components/myuw-drawer@^1"></script>
-```
+<!-- import the module -->
+<script type="module" src="https://cdn.my.wisc.edu/@myuw-web-components/myuw-drawer@latest/myuw-drawer.min.mjs"></script>
 
-## Using the component
+<!-- fallback for browsers without ES2015 module support -->
+<script nomodule src="https://cdn.my.wisc.edu/@myuw-web-components/myuw-drawer@latest/myuw-drawer.min.js"></script>
 
-* Include script tag for component.
-* Add custom html tag
-
-```html
 <myuw-drawer>
   <myuw-drawer-link
     slot="myuw-drawer-links"
     name="MyUW home"
     icon="mail"
-    href="http://google.com">
-  </myuw-drawer-link>
+    href="http://google.com"
+  ></myuw-drawer-link>
   <myuw-drawer-subheader
     slot="myuw-drawer-links"
     name="Subheader"
-    divider>
-  </myuw-drawer-subheader>
+    divider
+  ></myuw-drawer-subheader>
   <myuw-drawer-link
     slot="myuw-drawer-links"
     name="Browse apps"
     icon="explore"
-    href="http://google.com">
-  </myuw-drawer-link>
+    href="http://google.com"
+  ></myuw-drawer-link>
 </myuw-drawer>
 ```
+
+_Note:_ The evergreen "latest" version can be used for convenience, but in production settings it is recommended to use the latest [release version](https://github.com/myuw-web-components/myuw-drawer/releases) specifically, and upgrade only after testing!
 
 ### Configuration / child components for the drawer
 
@@ -65,6 +54,15 @@ Use the named `<slot>` tags to include child components of the myuw-drawer:
 - **name:** Set the text of the subheader
 - **divider:** Display a dividing line above the subheader (will display if attribute is present, no value required)
 
+
+## Development and contribution
+
+To run the demo app locally and test the component, run the following commands:
+
+```bash
+$ npm install
+$ npm start
+```
 
 Cross-browser testing provided by:<br/>
 <a href="https://www.browserstack.com/"><img width="160" src="https://myuw-web-components.github.io/img/Browserstack-logo.svg" alt="BrowserStack"/></a>

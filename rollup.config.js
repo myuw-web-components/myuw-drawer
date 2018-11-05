@@ -1,13 +1,11 @@
-import { rollup } from 'rollup';
 import html from 'rollup-plugin-html';
 import minify from 'rollup-plugin-minify-es';
 import babel from 'rollup-plugin-babel';
 
-let fileName = 'myuw-drawer';
-let objName = 'MyUWDrawer';
+const fileName = 'myuw-drawer';
+const objName = 'MyUWDrawer';
 
-
-let plugins = {
+const plugins = {
   full: [
     html({
       include: `src/*.html`,
@@ -72,5 +70,5 @@ export default [
       name: objName,
       format: 'es'
     }
-  },
+  }
 ];
