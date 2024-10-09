@@ -1,5 +1,7 @@
 # `<myuw-drawer> and <myuw-drawer-link>`
 
+**`myuw-drawer and myuw-drawer-link` is not currently maintained.**
+
 A three-part slide out navigation drawer for use with the MyUW App Bar. Includes drawer, links, and optional subheaders with dividers.
 
 ## Usage
